@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'utils.css' %}">
+    <!-- Link to 'style.css' -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'style (1).css' %}">
+    <link rel="stylesheet" href="{% static 'blogpost2.css' %}">
+    <!-- Link to 'blogpost2.css' -->
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <!-- Link to 'mobile.css' -->
+    <link rel="stylesheet" href="{% static 'mobile.css' %}">
+    <link rel="stylesheet" href="{% static 'prc (2).css' %}">
+    <!-- Title -->
+    <title>About Us</title>
+</head>
+<body>
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <a href="/">
+                <span><img src="{% static 'logo_f.png' %}" width="94px" alt=""></span>
+            </a>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'blogg' %}">Post Your Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <form action="{% url 'search' %}" method="get">
+                <input class="form-input" type="text" name="query" placeholder="Article Search">
+                <button class="btn">Search</button>
+            </form>
+        </div>
+    </nav>
+    <section class="about-us">
+        <div class="about">
+            <img src="{% static 'mody-university-laxmangarh-226470.jpg' %}" class="pic">
+            <div class="text">
+                <h2>MODY <span>UNIVERSITY</span></h2>
+                <p>Mody University of Science and Technology (Also known as Mody University) was established in 1998 by the Rajasthan State Legislature. The university is also recognised by the UGC and BCI. Mody University is also approved by the All India Council For Technical Education (AICTE). Also, the university is accredited A+ by NAAC and ABET. Additionally, Mody University is a member of AIU and AACSB. MUST is one among the top 3 in India and within 601-700 universities of the world as per Shanghai ARWU (Academic Ranking of World Universities) 2022</p>
+                <div class="data">
+                    <a href="#" class="hire">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
